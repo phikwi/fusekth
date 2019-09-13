@@ -1,0 +1,26 @@
+<% include ./partials/header%>
+    
+    <div class="container">
+        
+        <div class="row">
+            <div class="col-md-7 col-sm-7 col-xs-7 ">
+                 <div class="textboxPos" style="margin-top:5px;">
+                     <div class="form-group shadow-textarea">
+                    <span id="ultext">
+                       <form action="/posts/<%=post._id %>?_method=PUT" method="POST" style="margin-left:70px"> 
+                         <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" name="post[body]"  ><%= post.body %></textarea> 
+                            
+                          <button type="submit" class="btn btn-success  btn-lg btn-block" >Submit</button> 
+            
+                              </span> 
+                        </form>
+                              </span>
+                  </div>
+                 </div>         
+            </div>        
+        </div>
+        
+    </div>
+  
+
+<% include ./partials/footer%>

@@ -1,0 +1,46 @@
+<% include ./partials/header%>
+    
+      <span class="border border-primary">
+     
+     <div class="container">
+       
+        <div class="row">
+             <div  style="border: 0.3px solid #030D14;
+       background-color: #fafeff;
+      margin-top: 5px;
+       margin-left: 150px;
+       box-shadow: 0.5px 0.5px 0px 0px #030D14;
+       border-radius: 6px 6px 6px 6px;" class="col-md-12-sm-12-xs-12" >
+                  
+                   <h2  style="font-family: 'Modak', cursive; "> My info</h2>
+                  <h3 style="font-family: 'Modak', cursive;">
+                    <i class="fas fa-user-astronaut fa-2x" ></i>
+                      
+                         <%= user.username%>
+                        
+                        </h3>
+                        
+                        
+                <h3 style="font-family: 'Modak', cursive;">
+                    <i class="fas fa-envelope-open-text fa-2x" ></i>
+                      
+                        <%= user.email%> 
+                        
+                        </h3>        
+                 <a href="/editpassword">
+                     
+                       <button type="button" class="btn btn-success btn-lg btn-block">Reset Password</button>
+                 </a>
+              
+             </div>     
+            
+            
+            
+        </div>
+         
+         
+     </div>
+   
+      </span>
+ 
+ <% include ./partials/footer%>

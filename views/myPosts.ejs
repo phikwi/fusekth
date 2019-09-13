@@ -1,0 +1,115 @@
+ <% include ./partials/header%>
+ 
+   
+   <div class="container">
+                   <%posts.reverse().forEach(function(post) {%> 
+                
+                  
+         <div  style=" border: 0.3px solid #030D14;
+                       background-color: #fafeff;
+                       margin-top: 5px;
+                       margin-left: 10px;
+                        box-shadow: 0.5px 0.5px 0px 0px #030D14;
+                        background-color:;
+                        
+                       border-radius: 6px 6px 6px 6px;" id="BoarderOnTextDiv">
+           <i id="authorIconstyle" class="fas fa-user-circle fa-2x" style="margin-left:15px;"></i> <span id="CommentAuthorTextStyle"  >  <%=post.author.username%> </span> 
+           
+          <p style="font-color:white;" id="PostTextStyle">
+              
+              <%=post.body %>
+     
+     
+                
+               <div class="container">
+               
+                 
+                
+                
+                
+                <button class="btn btn-primary"  data-toggle="collapse" data-target="#collapseExample" ><i class="far fa-comment fa-lg"> <%=post.comments.length %></i></button>
+                   
+                    <% if( currentUser && post.author.id.equals(currentUser._id)){ %>    
+                         <form action="/posts/<%= post._id %>/edit" method="GET">
+                       
+                           <button class="btn btn-warning" style="margin-top:4px;"><i class="fas fa-edit fa-lg"></i></button>
+                       
+                         </form>
+                   
+                   
+                        <form action="/posts/<%= post._id %>/?_method=Delete" method="POST" >
+                       
+                           <button class="btn btn-danger" style="margin-top:4px;"><i class="fas fa-trash-alt"></i></button>
+                       
+                        </form>
+                    <% } %>
+                    
+                 <div class="collapse" id="collapseExample">
+                 <%post.comments.reverse().forEach(function(comment) {%> 
+                 
+                 <p>
+                   
+                   <i id="authorIconstyle" class="fas fa-user-circle fa-2x"></i> <span id="CommentAuthorTextStyle" >   <%=comment.author.username%> </span>  
+                   </p>
+                 <div  class ="commentBox">
+                  <p >
+                 <span id="CommentTextStyle">   <%=comment.text%> </span>
+                 </p>
+                   <% if( currentUser && comment.author.id.equals(currentUser._id)){ %>
+                    <form action="/comments/<%=comment._id %>/?_method=Delete" method="post">
+                 
+                      <button type="submit"  class="btn btn-danger"><i class="fas fa-trash-alt fa-lg"></i></button>
+                 
+                   </form>
+                   <% } %>
+                 </div>
+                   
+               
+                   <% })%>
+                    </div>
+                 </div>
+            </p>
+            
+          
+            <div class="form-group">
+             <div class="container">
+            <div class="collapse" id="collapseExample">      
+             <form action="/posts/<%= post._id %>/comments" method="POST"  action="/posts/<%=post._id %>/comments/new" method="GET">
+                 <div class="textboxPos" >
+                   <div class="form-group shadow-textarea">
+                       <span id="ultext">
+           
+                           <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" name ="comment[text]"  placeholder="Comment"></textarea>
+                             <button type="submit"  class="btn btn-primary">Submit</button>
+             
+                         </span>
+                     </div>
+                   </div>
+          
+          
+                 
+                 
+             </form>
+             
+            
+             
+             </div>
+            </div>
+              </div>
+         </div>
+      <% })%>
+      
+       
+       
+       
+       
+       
+   </div>
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ <% include ./partials/footer%>

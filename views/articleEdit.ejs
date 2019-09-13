@@ -1,0 +1,26 @@
+<% include ./partials/header%>
+
+  <div class="container">
+       <div style="width:60%" >
+                              <form action="/article/<%=article._id %>?_method=PUT" method="post" style="margin-left:70px">
+                                 
+                                  <div class="form-group">
+                                     <input class  ="form-control" type="text" name ="article[title]"  value="<%=article.title%>">
+                                  </div>
+            
+                                      <div class="form-group">
+                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="25" name ="article[body]"><%=article.body%></textarea>
+            
+                                    </div>
+            
+                                   
+         
+          
+                                   <button type="submit" class ="btn btn-lg btn-primary btn-block">Redigera</button>
+
+                            </form>
+                        </div>  
+      
+  </div>
+ 
+<% include ./partials/footer%>

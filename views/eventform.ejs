@@ -1,0 +1,31 @@
+ 
+ <% include ./partials/header%>
+ 
+ <div style="width: 30%; margin: 30px auto; "  id="ultext">
+           
+           <p id="event">Make Your Event</p>
+          <form action="/events" method="post">
+          <div class="form-group">
+           <input class  ="form-control" type="text" name ="event[title]"  placeholder="Title">
+            </div>
+            
+            <div class="form-group">
+               <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name ="event[description]"  placeholder="Description"></textarea>
+          
+            </div>
+            
+            <div class="form-group">
+           <input class  ="form-control" type="text" name ="event[date]"  placeholder="Date">
+            </div>
+            
+            <div class="form-group">
+           <input class  ="form-control" type="text" name ="event[imageUrl]"  placeholder="imageUrl">
+            </div>
+         
+          
+        <button type="submit" class ="btn btn-lg btn-primary btn-block">Submit</button>
+     </form>
+      <a href="/posts">Back</a>
+     </div>
+     
+     <% include ./partials/footer%>

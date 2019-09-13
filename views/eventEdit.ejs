@@ -1,0 +1,35 @@
+<% include ./partials/header%>
+        
+            <div class="container" >
+        
+                       <div style="width: 100%; margin: 30px auto; "  id="ultext">
+           
+                          <div style="width:60%" >
+                              <form action="/event/<%=event._id %>?_method=PUT" method="post" style ="">
+                                 
+                                  <div class="form-group">
+                                     <input class  ="form-control" type="text" name ="event[title]" value="<%=event.title%>"  placeholder="Title">
+                                  </div>
+            
+                                      <div class="form-group">
+                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name ="event[description]"  placeholder="Description"> <%=event.description%> </textarea>
+            
+                                    </div>
+            
+                                    <div class="form-group">
+                                        <input class  ="form-control" type="text" name ="event[date]"  value="<%=event.date%>" placeholder="Date">
+                                     </div>
+            
+                                    <div class="form-group">
+                                        <input class  ="form-control" type="text" name ="event[imageUrl]"  value="<%=event.imageUrl%>" placeholder="imageUrl">
+                                     </div>
+         
+          
+                                   <button type="submit" class ="btn btn-lg btn-primary btn-block">Submit</button>
+
+                            </form>
+                        </div>  
+                    </div>
+            </div>
+
+<% include ./partials/footer%>

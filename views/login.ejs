@@ -1,0 +1,25 @@
+<% include ./partials/header%>
+  
+    <div class="container">
+      <div style="margin-left:70px;">  
+        <h1>Logga in</h1>
+         <form action="/login" method="post">
+ 
+            <div class="form-group">
+               <label for="exampleInputPassword1">Användanamn</label>
+               <input type="text" name ="username" class="form-control" id="exampleInputPassword1" placeholder="Användanamn">
+             </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Lösenord</label>
+               <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Lösenord">
+            </div>
+            <a href="/editpassword"> 
+               <h3>Glömt lösenord?</h3>
+            </a>
+            
+            <button type="submit" class="btn btn-primary btn-lg"  style="margin-bottom:3px;">Logga in</button>
+         </form>
+      </div>  
+ </div>
+
+<% include ./partials/footer%>

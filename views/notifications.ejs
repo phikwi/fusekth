@@ -1,0 +1,41 @@
+ <% include ./partials/header%>
+     
+     
+       
+       <div class ="container">
+        
+           <div  style=" border: 0.3px solid #030D14;
+                          background-color: #fafeff;
+                          margin-top: 5px;
+                          margin-left: 10px;
+                          box-shadow: 0.5px 0.5px 0px 0px #030D14;
+                          border-radius: 6px 6px 6px 6px;">
+            
+               
+        <% foundUser.messageQueue.reverse().forEach(function(message){ %>
+        
+          
+            <h4 style="margin-left:10px;">  <%= message.text %> Har Kommenterat på din inlägg</h4>
+         
+         
+        <% }) %>
+         
+        
+           <h3 style="margin-left:10px; font-family:'Permanent Marker', cursive;" >Kolla din profil för detaljer</h3> 
+           
+           <form action="/notifications/<%=currentUser._id%>" method="post">
+               
+               <button type ="submit" style="margin-bottom:5px" type="button" class="btn btn-primary btn-lg btn-block">Markera som läst</button>
+               
+           </form>
+            
+            
+           </div>
+     
+       </div>
+      
+      
+      
+     
+     
+   <% include ./partials/footer%>

@@ -1,0 +1,94 @@
+<% include ./partials/header%>
+ <div class="container">
+     <div class="row">
+       
+       <div class="col-lg-10 col-md-8 col-sm-8">
+          <div class="textboxPos" >
+          <div class="form-group shadow-textarea">
+             <span id="ultext">
+            <form action="/posts" method="POST"> 
+            <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" name="post[body]"  placeholder="Say Something..."></textarea>
+           <div id="whitearea">
+            <button type="submit" class="btn btn-primary  btn-lg btn-block" >Post</button> 
+            </div>
+            </span> 
+             </form>
+            </span>
+          </div>
+          </div>
+     <%posts.forEach(function(post) {%> 
+         <div  id="BoarderOnTextDiv">
+          
+          <p id="PostTextStyle">
+              <%=post.body %>
+              
+               <div class="container">
+                <button class="btn btn-primary"  data-toggle="collapse" data-target="#collapseExample" ><i class="far fa-comment fa-lg"> <%=post.comments.length %></i></button>
+                 <%post.comments.forEach(function(comment) {%> 
+                 <div class="collapse" id="collapseExample">
+                 <p>
+                   
+                   <i id="authorIconstyle" class="fas fa-user-circle fa-2x"></i> <span id="CommentAuthorTextStyle" >   <%=comment.author.username%> </span>  
+                   </p>
+                 <div  class ="commentBox">
+                  <p >
+                 <span id="CommentTextStyle">   <%=comment.text%> </span>
+                 </p>
+                 
+                 </div>
+                    </div>
+            
+                   <% })%>
+                 </div>
+            </p>
+            
+          
+            <div class="form-group">
+             <div class="container">
+             <form action="/posts/<%= post._id %>/comments" method="POST" class="collapse" id="collapseExample" action="/posts/<%=post._id %>/comments/new" method="GET">
+                 <div class="textboxPos" >
+                   <div class="form-group shadow-textarea">
+                       <span id="ultext">
+           
+                           <textarea class="form-control z-depth-1" id="exampleFormControlTextarea6" rows="5" name ="comment[text]"  placeholder="Comment"></textarea>
+                             <button type="submit"  class="btn btn-primary">Submit</button>
+             
+                         </span>
+                     </div>
+                   </div>
+          
+          
+             </form>
+            </div>
+              </div>
+         </div>
+      <% })%>
+      
+       
+      
+         
+        </div>  
+           
+     </div>
+       <div class="container">
+          <%  events.forEach(function(event){ %>
+           <button type="button" class="btn btn-primary btn-lg">Large button</button>
+            <div  class="card" style="max-width:202px;">
+                  
+                  <img src=<%= event.imageUrl %>class="card-img-top" alt="...">
+                   <div class="card-body">
+                     <h5 class="card-title"> <%= event.title %> </h5>
+                       <p class="card-text"><%= event.description %></p>
+                        <p class="card-text"><%= event.date%></p>
+                       </div>
+                     
+                      
+            
+              </div> 
+          <% }) %>
+       </div> 
+     
+     
+ </div>   
+     
+<% include ./partials/footer%>

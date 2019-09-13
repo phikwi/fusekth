@@ -1,0 +1,17 @@
+ 
+ <% include ./partials/header%>
+ 
+ <div style="width: 30%; margin: 30px auto; "  id="ultext">
+         
+          <form action="/posts/<%= post._id %>/comments" method="POST">
+          <div class="form-group">
+           <input class  ="form-control" type="text" name ="comment[text]"  placeholder="Comment">
+            </div>
+         
+          
+        <button type="submit" class ="btn btn-lg btn-primary btn-block">Submit</button>
+     </form>
+      <a href="/posts">Back</a>
+     </div>
+     
+     <% include ./partials/footer%>

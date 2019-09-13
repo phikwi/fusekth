@@ -1,0 +1,54 @@
+<% include ./partials/header%>
+
+   <div style ="" class="container">
+       
+       
+         <div   class="row">
+           
+                
+                    <%  events.reverse().forEach(function(event){ %>
+                    <span>
+                    
+                      <div  class="card  border-black"  style="width:30rem; border:2px solid black;  margin-bottom:5px; margin-right:5px; ">
+                          
+                        <div class="thumbnail">
+                            
+                             <img src=<%= event.imageUrl %>class="card-img-top" alt="...">
+                        </div>
+                          <div class="card-body" >
+                             <h5 class="card-title"> <%= event.title %> </h5>
+                             <p class="card-text"><%= event.description %></p>
+                             <p class="card-text"><%= event.date%></p>
+                              <% if( currentUser && event.author.id.equals(currentUser._id)){ %>    
+                             <form action="/event/<%=event._id%>/edit" method="GET">
+                       
+                                 <button class="btn btn-warning" style="margin-top:4px;"><i class="fas fa-edit fa-lg"></i></button>
+                       
+                             </form>
+                              <form action="/event/<%= event._id %>/?_method=Delete" method="POST">
+                       
+                                 <button class="btn btn-danger" style="margin-top:4px;"><i class="fas fa-trash-alt fa-lg"></i></button>
+                       
+                             </form>
+                             <% } %>
+                    </div>
+                    
+            
+                 </div> 
+                 </span>
+               <% }) %>
+                
+                
+                
+                 
+             
+             
+             
+             
+             
+             
+         </div>
+       
+   </div>
+
+ <% include ./partials/footer%>

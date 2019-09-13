@@ -1,0 +1,67 @@
+<% include ./partials/header%>
+   
+     <div  class="container">
+         
+          <button class="btn btn-primary-outline" style=" margin-left:px;" data-toggle="collapse" data-target="#collapseExample1" >
+                    
+                     <p id="event" style="margin-left:25px">Skriv en artikel
+                      
+                          <i class="fas  fa-pen"></i>
+                     </p>
+                    
+                </button>
+           
+         <div class="collapse" id="collapseExample1">
+               <form action="/article" method="post" style="margin-left:px">
+                                 
+                                  <div class="form-group">
+                                     <input class  ="form-control" type="text" name ="article[title]" placeholder="titel">
+                                  </div>
+            
+                                      <div class="form-group">
+                                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="25" name ="article[body]" placeholder="innehål"></textarea>
+            
+                                    </div>
+            
+                                   
+         
+          
+                                   <button type="submit" class ="btn btn-lg btn-primary btn-block">Skicka</button>
+
+                            </form>
+             
+         </div>     
+           
+    <%articles.forEach(function(article) {%> 
+    
+      
+          <div class="row">
+            <div class="col-md-12-sm-12-xs-12" >
+              <div  id="BoarderOnTextDiv" style="margin-right:15px;">
+                <div style="">
+                   <h1 style ="margin-left:15px" > <%= article.title %></h1>    
+                   <p  style ="margin-left:15px; margin-right:7px;" >  <%= article.body %> </p>
+                    <h5  style ="margin-left:15px"> Av:<%= article.author.username %>  </h5>
+                     <% if( currentUser && article.author.id.equals(currentUser._id)){ %> 
+                             <form  style ="margin-left:15px; margin-bottom: 3px" action="/article/<%=article._id%>/edit" method="GET">
+                       
+                                   <button  style ="" class="btn btn-outline-info" style="margin-top:7px; ">Redigera </button>
+                       
+                             </form>
+                             <form  style ="margin-left:15px"  action="/article/<%=article._id%>?_method=Delete" method="post">
+                       
+                                  <span style="display:inline; margin-bottom:5px;">   <button  style ="margin-left:15px " class="btn btn-danger" style="margin-top:7px; margin-bottom:4px;"><i class="fas fa-trash-alt fa-lg"></i></button> </span>     
+                       
+                             </form>
+                            <% } %>     
+                </div> 
+           </div>     
+           </div>
+          
+           </div>
+        
+           
+     <% })%>
+      </div>  
+
+<% include ./partials/footer%>
