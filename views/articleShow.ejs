@@ -39,8 +39,8 @@
             <div class="col-md-12-sm-12-xs-12" >
               <div  id="BoarderOnTextDiv" style="margin-right:15px;">
                 <div style="">
-                   <h1 style ="margin-left:15px; color:white;" > <%= article.title %></h1>    
-                   <p  style ="margin-left:15px; margin-right:7px;color:white;" >  <%= article.body %> </p>
+                   <h1 style ="margin-left:15px; color:black;" > <%= article.title %></h1>    
+                   <p  style ="margin-left:15px; margin-right:7px;color:black;" >  <%= article.body %> </p>
                     <h5  style ="margin-left:15px"> Av:<%= article.author.username %>  </h5>
                      <% if( currentUser && article.author.id.equals(currentUser._id)){ %> 
                              <form  style ="margin-left:15px; margin-bottom: 3px" action="/article/<%=article._id%>/edit" method="GET">
