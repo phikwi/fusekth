@@ -29,7 +29,7 @@
          <div  id="BoarderOnTextDiv">
            <i id="authorIconstyle" class="fas fa-user-circle fa-2x" style="margin-left:15px;"></i> <span id="CommentAuthorTextStyle"  >  <%=post.author.username%> </span> 
            
-          <p id="PostTextStyle">
+          <p id="PostTextStyle" style="color:black">
               
               <%=post.body %>
      
@@ -66,8 +66,8 @@
                    <i id="authorIconstyle" class="fas fa-user-circle fa-2x"></i> <span id="CommentAuthorTextStyle" >   <%=comment.author.username%> </span>  
                    </p>
                  <div  class ="commentBox">
-                  <p >
-                 <span id="CommentTextStyle">   <%=comment.text%> </span>
+                  <p  >
+                 <span id="CommentTextStyle" style="color:black">   <%=comment.text%> </span>
                  </p>
                    <% if( currentUser && comment.author.id.equals(currentUser._id)){ %>
                     <form action="/comments/<%=comment._id %>/?_method=Delete" method="post">
