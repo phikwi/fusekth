@@ -1,5 +1,9 @@
 body{
-    background:white;
+      border: 0.3px solid #030D14;
+  background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 
@@ -34,7 +38,7 @@ body{
 #PostTextStyle{
     font-family: 'Barlow', sans-serif;
     font-size:145%;
-    color:black;
+    color:white;
     font-weight:700 ;
     padding-left: 15px;
     
@@ -53,11 +57,14 @@ body{
 
 
 #BoarderOnTextDiv{
-   border: 0.3px solid #030D14;
-   background-color: #fafeff;
+   border: 0.5px  solid white;
+  background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
    margin-top: 5px;
     margin-left: 10px;
-    box-shadow: 0.5px 0.5px 0px 0px #030D14;
+    box-shadow: 0.5px 0.5px 0px 0px white;
     border-radius: 6px 6px 6px 6px;
 }
 
@@ -67,7 +74,10 @@ body{
 */
 #colors
 {
-    background-color:  #0275d8;
+    background: #005C97;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #363795, #005C97);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #363795, #005C97); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 .btn-primary
@@ -78,7 +88,7 @@ body{
 #CommentTextStyle{
     font-family:  sans-serif;
     font-size:120%;
-    color:black;
+    color:white;
     font-weight:500 ;
     padding-left: 15px;
     
@@ -90,7 +100,7 @@ body{
     font-family: 'Abril Fatface',sans-serif;
     font-size:15px;
     letter-spacing: 1px;
-    color:black;
+    color:white;
     font-weight:200 ;
     padding-left: 15px;
     
@@ -134,7 +144,7 @@ body{
 #event{
     font-family: 'Permanent Marker', cursive;
      font-size:20px;
-      color:#0275d8;
+      color:white;
     font-weight: 700;
 }
 
