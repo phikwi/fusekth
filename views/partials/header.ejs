@@ -53,27 +53,11 @@
      
 
           <a  class="navbar-brand" href="/posts" style="margin-right:50px"> <span style="color:white;"><i  class="fas fa-boxes fa-2x"><span><h3 style=" font-family:'Oleo Script', cursive; font-size:28px;">fuse</h3></span></i></span></a>
-            
-            
-            
-            <button  style="padding"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
-    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"><i class="fas fa-bars fa-2x "></i></span></button>
+    
 
-              
-            
-             
-         <div class="collapse navbar-collapse" id="navbarSupportedContent15">
-             
-          <ul class="navbar-nav mr-auto" >
-             <li class="nav-item active">
-        
-                <a class="nav-link" href="/posts"><span id="ultext"> <i  class="fas fa-home fa-lg"></i> Hem</span> </a>
-             </li>
-            
-            <li class="nav-item active">
-                  <a class="nav-link" href="/article"><span id="ultext"><i class="fas fa-newspaper fa-lg"></i> Artiklar </span></a>
-            </li>
-            
+               <a class="nav-link" href="/posts"><span id="ultext"> <i  class="fas fa-home fa-lg"></i> Hem</span> </a>
+           
+                         
               <% if(currentUser && currentUser.messageQueue.length > 0){ %>
               
             <li class="nav-item active">
@@ -91,9 +75,28 @@
                  </span></a>
             </li>
             <% } %>
+             <a class="nav-link" href="/book" ><span id="ultext"> <i class="fas fa-book fa-lg"></i> kurslitteratur</span></a>
+             
+                     
+             <a class="nav-link" href="/article"><span id="ultext"><i class="fas fa-newspaper fa-lg"></i> Artiklar </span></a>
+            
+            <button  style="padding"class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent15"
+    aria-controls="navbarSupportedContent15" aria-expanded="false" aria-label="Toggle navigation"><span style="margin-top:13px; margin-left:12px;" class="navbar-toggler-icon"><i class="fas fa-bars fa-2x "></i></span></button>
+             
+         <div class="collapse navbar-collapse" id="navbarSupportedContent15">
+             
+          <ul class="navbar-nav mr-auto" >
+             <li class="nav-item active">
+        
+             </li>
             
             <li class="nav-item active">
-                 <a class="nav-link" href="/book" ><span id="ultext"> <i class="fas fa-book fa-lg"></i> kurslitteratur</span></a>
+                 
+            </li>
+
+            
+            <li class="nav-item active">
+                 
             </li>
          
                 
