@@ -1,4 +1,8 @@
 <% include ./partials/header%>
+ 
+    <div style=" background: #005C97;
+                background: -webkit-linear-gradient(to right, #363795, #005C97); 
+                     background: linear-gradient(to right, #363795, #005C97);" font-color="white;">
      
       <div class="container" >
           
@@ -10,7 +14,7 @@
                        
                        </div>
                        
-                          <h4>Beskrivning</h4>
+                          <h4> <span id="fontColor">Beskrivning</span></h4>
                        <div class="form-group">
                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" name="book[description]"><%=book.description%></textarea>
                           
@@ -41,5 +45,5 @@
                    </form>
        </div>      
  
-
+</div>
 <% include ./partials/footer%>
