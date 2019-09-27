@@ -56,7 +56,7 @@
                     <% } %>
                     
                  <div class="collapse" id="collapseExample">
-                 <%post.comments.reverse().forEach(function(comment) {%> 
+                 <%post.comments.forEach(function(comment) {%> 
                  
                  <p>
                    
@@ -161,21 +161,18 @@
                    
                   
                  </div>
-                
-                
+                  
+                   
                   <%  events.reverse().forEach(function(event){ %>
-                    <span>
                     
-                      <div  style="border:5px solid #0275d8;"  class="card "  style="width:30rem;  margin-bottom:5px ">
-                          
-                        <div class="thumbnail">
-                            
-                             <img src=<%= event.imageUrl %>class="card-img-top" alt="...">
-                        </div>
+                    
+                      <div class="card" style="width: 35rem; margin-bottom:4px;" >
+                      
                           <div class="card-body" >
+                                <img src=<%= event.imageUrl %> class="card-img-top" alt="...">
                              <h5 class="card-title"> <%= event.title %> </h5>
                              <p class="card-text"><%= event.description %></p>
-                             <p class="card-text"><%= event.date%></p>
+                             <h3 class="card-text"><%= event.date%></h3>
                               <% if( currentUser && event.author.id.equals(currentUser._id)){ %>    
                              <form action="/event/<%=event._id%>/edit" method="GET">
                        
@@ -192,7 +189,7 @@
                     
             
                  </div> 
-                 </span>
+                
                <% }) %>
                
            </div>
