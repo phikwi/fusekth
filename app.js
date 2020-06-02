@@ -19,9 +19,6 @@ var path=require("path");
 
 
 
-//APP CONFIG===============================
-mongoose.connect("mongodb+srv://kt_hub:Markspain1@cluster0-bc3j2.mongodb.net/test?retryWrites=true&w=majority",{useNewUrlParser: true});
-var MongoUri="mongodb://localhost:27017/kt_hub";
 
 //------home DB
  //-----cluster DB//  mongodb+srv://kt_hub:Markspain1@cluster0-bc3j2.mongodb.net/test?retryWrites=true&w=majority
