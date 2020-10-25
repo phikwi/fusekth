@@ -20,8 +20,7 @@ var path=require("path");
 
 
 
-//------home DB
- //-----cluster DB//  mongodb+srv://kt_hub:Markspain1@cluster0-bc3j2.mongodb.net/test?retryWrites=true&w=majority
+
  
 mongoose.set('useFindAndModify', false);
 mongoose.set('useCreateIndex', true);
