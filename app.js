@@ -186,17 +186,6 @@ app.use(function(req, res, next){
 })
 
 
-//post creation
-
-//CREATING A POST
-/*
-post.create({
-    
-    body:"hey mofos"
-    
-})
-*/
-
 // --HOME(INDEX ROUTEs)---
 
 app.get("/",function(req, res) {
